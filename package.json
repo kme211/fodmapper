@@ -4,7 +4,8 @@
   "description": "Tells you which foods are high FODMAP",
   "main": "index.js",
   "scripts": {
-    "build": "gulp"
+    "start": "gulp",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",

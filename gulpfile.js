@@ -26,3 +26,5 @@ gulp.task('generate-service-worker', function(callback) {
 });
 
 gulp.task('default', ['generate-service-worker', 'serve', 'open']);
+
+gulp.task('build', ['generate-service-worker']);
