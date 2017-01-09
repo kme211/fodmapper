@@ -1,0 +1,25 @@
+{
+  "name": "fodmapper",
+  "version": "1.0.0",
+  "description": "Tells you which foods are high FODMAP",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kme211/low-fodmapper.git"
+  },
+  "author": "Keari Eggers <kungfu.keari@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kme211/low-fodmapper/issues"
+  },
+  "homepage": "https://github.com/kme211/low-fodmapper#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "open": "0.0.5",
+    "sw-precache": "^4.3.0"
+  }
+}
