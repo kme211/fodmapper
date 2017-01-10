@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kme211/low-fodmapper.git"
+    "url": "git+https://github.com/kme211/fodmapr.git"
   },
   "author": "Keari Eggers <kungfu.keari@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kme211/low-fodmapper/issues"
+    "url": "https://github.com/kme211/fodmapr/issues"
   },
-  "homepage": "https://github.com/kme211/low-fodmapper#readme",
+  "homepage": "https://github.com/kme211/fodmapr#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
