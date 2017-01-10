@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Is it a FODMAP?</title>
+  <title>fodmapr</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
@@ -15,20 +15,27 @@
   <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
-  <header>
-    <h1>Is it a <a href="https://en.wikipedia.org/wiki/FODMAP" target="_blank">FODMAP</a>?</h1>
+  <header class="header">
+    <div class="header__app-title">fodmapr</div>
   </header>
   
-  <div class="legend">
-    <span class="high">Yes, avoid it</span>
-    <span class="low">No, it's okay</span>
+  <div class="content">
+    <h1>FODMAP checker</h1>
+    <h2 class="subtitle">Type in a name of a food and find out where it falls 
+    in the <a href="https://en.wikipedia.org/wiki/FODMAP" target="_blank">FODMAP</a> spectrum.</h2>
+    
+    <div class="legend">
+      <span class="high">High, avoid it</span>
+      <span class="low">Low, it's okay</span>
+    </div>
+    
+    <form class="search-form">
+      <input type="text" class="search" placeholder="Food name">
+      <ul class="suggestions">
+      </ul>
+    </form>
+    
   </div>
-  
-  <form class="search-form">
-    <input type="text" class="search" placeholder="Food name">
-    <ul class="suggestions">
-    </ul>
-  </form>
   
   <script src="scripts/app.js" async></script>
 </body>

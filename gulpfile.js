@@ -2,17 +2,34 @@ const gulp = require('gulp');
 const connect = require('gulp-connect');
 const open = require('open');
 const ROOT_DIR = 'app';
+const PORT = 5000;
 
-gulp.task('serve', function () {
+gulp.task('connect', function () {
   connect.server({
     root: ROOT_DIR,
-    port: 8080
+    port: PORT,
+    livereload: true
   });
 });
 
 gulp.task('open', function() {
-  open('http://localhost:8080');
-})
+  open(`http://localhost:${PORT}`);
+});
+
+gulp.task('html', function () {
+  return gulp.src('./app/*.html')
+    .pipe(connect.reload());
+});
+
+gulp.task('css', function () {
+  return gulp.src('./app/styles/*.css')
+    .pipe(connect.reload());
+});
+ 
+gulp.task('watch', function () {
+  gulp.watch(['./app/*.html'], ['html']);
+  gulp.watch(['./app/styles/*.css'], ['css']);
+});
 
 gulp.task('generate-service-worker', function(callback) {
   var path = require('path');
@@ -25,6 +42,6 @@ gulp.task('generate-service-worker', function(callback) {
   }, callback);
 });
 
-gulp.task('default', ['generate-service-worker', 'serve', 'open']);
+gulp.task('default', ['connect', 'watch', 'open']);
 
 gulp.task('build', ['generate-service-worker']);
