@@ -39,7 +39,7 @@
         </li>
       `;
     }).join('');
-    suggestions.innerHTML = html;
+    suggestions.innerHTML = html.length ? html : '<li>Sorry, no results were found.</li>';
   }
   
   const searchInput = document.querySelector('.search');
